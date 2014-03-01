@@ -12,11 +12,15 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "cress": "~0.5.4",
-    "normalize-scss": "~3.0.0"
+    "normalize-scss": "~3.0.0",
+    "modernizr": "~2.7.1"
   },
   "overrides": {
     "cress": {
       "ignore": true
+    },
+    "modernizr": {
+      "main": "modernizr.js"
     },
     "jquery": {
       "main": [
