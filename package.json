@@ -1,19 +1,15 @@
 {
-  "name": "form5-gulp-blender",
-  "description": "Our gulp seed front-end development workflow",
-  "version": "0.8.14",
+  "name": "holl-fasteignasala",
+  "description": "Running on gulp-blender + CreSS",
+  "version": "0.1.1",
   "author": {
-    "name": "Form5",
-    "email": "hello@form5.is",
-    "url": "http://www.form5.is"
+    "name": "Benedikt D Valdez",
+    "email": "benediktvaldez@gmail.com",
+    "url": "http://benediktvaldez.info"
   },
   "bugs": {
-    "url": "https://github.com/Form5/gulp-blender/issues"
+    "url": "https://github.com/benediktvaldez/holl-fasteignasala/issues"
   },
-  "contributors": [
-    "Benedikt D Valdez <benedikt@form5.is>",
-    "Arni Reynir Oskarsson <arni@form5.is>"
-  ],
   "devDependencies": {
     "bower": "^1.2.8",
     "gulp": "~3.5.2",
@@ -42,19 +38,11 @@
     "map-stream": "^0.1.0",
     "node-notifier": "^1.2.1"
   },
-  "homepage": "https://github.com/Form5/gulp-blender",
-  "keywords": [
-    "form5",
-    "gulp",
-    "blender",
-    "front-end",
-    "seed"
-  ],
-  "license": "MIT",
+  "homepage": "https://holl-fasteignasala.benediktvaldez.info",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Form5/gulp-blender.git"
+    "url": "git@github.com:benediktvaldez/holl-fasteignasala.git"
   },
   "scripts": {
     "test": ""

@@ -1,19 +1,19 @@
 {
-  "name": "form5-gulp-blender",
-  "version": "0.8.14",
-  "homepage": "https://github.com/Form5/gulp-blender",
+  "name": "holl-fasteignasala",
+  "version": "0.1.1",
+  "homepage": "https://holl-fasteignasala.benediktvaldez.info",
   "authors": [
-    "Form5 <hello@form5.is>",
-    "Benedikt D Valdez <benedikt@form5.is>",
-    "Arni Reynir Oskarsson <arni@form5.is>"
+    "Benedikt D Valdez <benedikt@form5.is>"
   ],
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.0",
     "cress": "~0.5.4",
     "normalize-scss": "~3.0.0",
-    "modernizr": "~2.7.1"
+    "modernizr": "~2.7.1",
+    "form5-alignment": "~1.1.7",
+    "requirejs": "~2.1.11",
+    "requirejs-domready": "~2.0.1"
   },
   "overrides": {
     "cress": {
@@ -21,6 +21,9 @@
     },
     "modernizr": {
       "main": "modernizr.js"
+    },
+    "requirejs-domready": {
+      "main": "domReady.js"
     },
     "jquery": {
       "main": [
