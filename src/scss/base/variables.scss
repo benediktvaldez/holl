@@ -1,6 +1,6 @@
 // Typography
-$font-family: 'Lucida Grande', Arial, tahoma, sans-serif;
-$font-family-alt: 'Georgia', $font-family;
+$font-family: 'Montserrat', 'Lucida Grande', Arial, tahoma, sans-serif;
+$font-family-alt: 'Montserrat Subrayada', $font-family;
 $font-size: 16px;
 $font-color: #333;
 $line-height: 1.25;
@@ -40,12 +40,13 @@ $color-gray: #999999;
 $color-gray-light: #ccc;
 
 // Colors
-$color-red: #ee6969;
-$color-light: #ededeb;
-$color-blue: #41485e;
+$color-blue: #2A5276;
+$color-blue-light: #77a3c0;
+$color-green: #3A762A;
+$color-light: #dedede;
 
-$color-primary: $color-red;
-$color-secondary: $color-blue;
+$color-primary: $color-blue;
+$color-secondary: $color-green;
 
 $color-border: $color-gray;
 
