@@ -38,3 +38,9 @@
     @media only screen and (min-width: $media) { @content; }
   }
 }
+
+@mixin respond-to-height($media) {
+  @if type-of($media) == number {
+    @media only screen and (max-height: $media) { @content; }
+  }
+}
