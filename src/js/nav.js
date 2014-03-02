@@ -40,12 +40,12 @@ define(['domReady','css3','jquery'], function(domReady,css3) {
       lastScroll = newScroll;
       if (diff > 5 && newScroll > navHeight) {
         if (!$nav.data('ishidden')) {
-          $nav.css(css3.translate(-navHeight));
+          // $nav.css(css3.translate(-navHeight));
         }
         return $nav.data('ishidden', true);
       } else if (newScroll + $window.height() < $document.height() && diff < -5) {
         if ($nav.data('ishidden')) {
-          $nav.css(css3.translate(0));
+          // $nav.css(css3.translate(0));
         }
         return $nav.data('ishidden', false);
       }

@@ -1,15 +1,16 @@
 define(['drawPath','jquery'], function(drawPath) {
 
-  var nav = document.querySelector('nav.top'),
-      logo = document.querySelector('svg.logo'),
-      logoHollPaths = logo.querySelectorAll('.holl path'),
-      phone = document.querySelector('svg.phone'),
-      phonePaths = phone.querySelectorAll('path'),
-      blueprint = document.querySelector('svg.blueprint'),
-      blueprintPaths = blueprint.querySelectorAll('path'),
-      speed = getComputedStyle(document.querySelector('hero'))['transition-delay'];
-
   $(document).one('full-window-height',function(){
+
+    var nav = document.querySelector('nav.top'),
+        hero = document.querySelector('hero'),
+        logo = hero.querySelector('svg.logo'),
+        logoHollPaths = logo.querySelectorAll('.holl path'),
+        phone = hero.querySelector('svg.phone'),
+        phonePaths = phone.querySelectorAll('path'),
+        blueprint = hero.querySelector('svg.blueprint'),
+        blueprintPaths = blueprint.querySelectorAll('path'),
+        speed = getComputedStyle(hero)['transition-delay'];
     speed = typeof speed !== 'number' ? parseFloat(speed) * 1000 : speed;
 
     $.each(logoHollPaths, function(index,path) {
@@ -18,7 +19,7 @@ define(['drawPath','jquery'], function(drawPath) {
 
     setTimeout(function(){
       logo.classList.add('done');
-    },speed*4);
+    },speed*8);
 
     setTimeout(function(){
       phone.classList.add('active');
@@ -26,7 +27,7 @@ define(['drawPath','jquery'], function(drawPath) {
         drawPath(path,speed);
       });
       nav.classList.add('active');
-    },speed*6);
+    },speed*10);
 
     triggerBlueprint(blueprint,blueprintPaths,60000);
   });
