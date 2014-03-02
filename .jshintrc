@@ -1,4 +1,7 @@
 {
+  "predef": [
+    "define"
+  ],
   "node" : true,
   "jquery" : true,
   "browser" : true,
