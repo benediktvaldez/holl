@@ -9,6 +9,22 @@ define(['domReady','css3','jquery'], function(domReady,css3) {
     $window = $(window);
     threshold = 0;
     lastScroll = 0;
+    var $lis = $nav.find('li'),
+        totalLiWidth = 0;
+
+    $.each($lis,function(index,li) {
+      totalLiWidth += $(li).outerWidth(true);
+    });
+
+    $window.on('resize', function() {
+      navHeight = parseInt($nav.innerHeight(),10);
+      if(totalLiWidth >= $window.width()) {
+        $nav.addClass('collapse');
+      } else {
+        $nav.removeClass('collapse');
+      }
+
+    }).trigger('resize');
 
     $window.on('scroll', function() {
       var diff, newScroll, navTop;
@@ -33,7 +49,7 @@ define(['domReady','css3','jquery'], function(domReady,css3) {
         }
         return $nav.data('ishidden', false);
       }
-    });
+    }).trigger('scroll');
   };
 
   domReady(function(){
