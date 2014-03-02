@@ -1,5 +1,43 @@
 extends shared/layout
 
+block header
+  include partials/_hero
+
+block footer
+  footer
+    p Höll - fasteignasala &copy; 2014
+
 block content
 
-  include partials/_hero
+  section.relative#Fyrirtaekid(full-window-height)
+    row(vertical-center)
+      column
+        h2 Fyrirtækið
+
+      column.medium-6.large-4.right
+        figure: img(src='http://lorempixel.com/1001/801')
+      column.medium-6.large-8
+        p Morbi at felis tortor. Integer pulvinar vulputate lacus, et iaculis quam porta imperdiet. Quisque varius commodo lectus vel rutrum. Nullam nec laoreet dui. Cras porttitor velit ac purus cursus, vitae volutpat quam ornare.
+        p Duis malesuada magna a magna consectetur, in ullamcorper dolor consequat. Proin ullamcorper purus augue, non posuere turpis ornare ac. Nulla facilisi. Vivamus quis sagittis dolor, ut placerat est. Cras id justo at nibh viverra vestibulum.
+        p Integer scelerisque eros id diam accumsan egestas. Morbi vel tempor sapien. Mauris accumsan varius nisl, non sodales dui scelerisque in. Aliquam a lorem nec libero rhoncus varius eget ac mi.
+
+  section.relative#Annad(full-window-height)
+    row(vertical-center)
+      column
+        h2 Annað
+      column.medium-6.large-8.right
+        p Nulla facilisi. Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae. Donec a dolor at justo congue accumsan et eu dui. Curabitur in nibh nunc. Nulla pulvinar non nisi in vulputate.
+        p Ut malesuada scelerisque nisl quis commodo. Suspendisse in purus erat. Donec mollis sodales tortor sed lobortis. Vestibulum rutrum at lorem eget tempor. Quisque ornare leo sit amet mollis varius. In faucibus aliquet rutrum. In et leo eget metus accumsan suscipit vitae id nibh.
+      column.medium-6.large-4
+        figure: img(src='http://lorempixel.com/1000/800')
+
+  section.relative#Seinast(full-window-height)
+    row(vertical-center)
+      column
+        h2 Þriðja
+      column.medium-6.large-8
+        p Ut hendrerit, magna vitae tristique euismod, urna nisl dictum lorem, nec ultricies arcu augue non arcu.
+        p Ut pharetra risus vel erat hendrerit, et ultrices neque semper. Sed iaculis, ligula sed euismod dignissim, enim enim convallis nibh, ac adipiscing velit ligula non magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed orci odio, porta vel interdum a, semper at dui.
+        p Interdum et malesuada fames ac ante ipsum primis in faucibus. In pharetra, elit eu euismod pulvinar, lorem nisi viverra libero, quis posuere sem dolor at elit. Sed ac risus lorem. Sed eget nunc scelerisque, ultrices massa id, mattis massa.
+      column.medium-6.large-4
+        figure: img(src='http://lorempixel.com/1002/802')
