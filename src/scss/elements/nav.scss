@@ -1,65 +1,65 @@
 
 nav {
   &.top {
-    user-select: none;
     @include clearfix;
+
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+
     margin: 0 auto;
 
-    background-color: $color-primary;
+    user-select: none;
 
     ul { @include reset-list; margin: 0; padding: 0; }
 
+    a { opacity: 0; }
+    &.active a { opacity: 1; }
+
     >ul {
       font-size: 0;
+      text-align: center;
 
       li {
-        display: inline-block;
         position: relative;
         z-index: 30;
+
+        display: block;
+
         font-size: $font-size;
 
         >a {
-          transition: background-color $transition-speed-fast;
           display: block;
-          padding: $spacing;
+          padding: $spacing/2 $spacing;
+
+          letter-spacing: 1px;
           line-height: rem-calc(20);
-
+          font-weight: 400;
+          text-transform: uppercase;
           color: white;
+
+          -webkit-font-smoothing: antialiased;
+
+          transition: opacity $transition-speed-slow, background-color $transition-speed-fast;
         }
 
-        &:hover >a,
-        >a:hover {
-          color: white;
-          background-color: $color-secondary;
-        }
+        @include respond-to(small-only) {
 
-        >ul {
-          opacity: 0;
-          visibility: hidden;
-
-          position: absolute;
-          top: 100%;
-          left: 0;
-          z-index: 30;
-
-          >li {
-            display: block;
-
-            >a {
-              white-space: nowrap;
-              padding: $spacing/2 $spacing;
-              background: $color-secondary;
-
-              &:hover { background-color: darken($color-secondary,5%); }
-            }
+          &:hover >a,
+          >a:hover {
+            color: rgba($color-light,0.75);
           }
         }
 
-        &:hover {
-          >ul {
-            transition: opacity $transition-speed-fast;
-            opacity: 1;
-            visibility: visible;
+        @include respond-to(medium) {
+          display: inline-block;
+
+          + li { margin-left: $spacing; }
+
+          >a { padding: $spacing; }
+
+          &:hover >a,
+          >a:hover {
+            background-color: rgba($color-light,0.25);
           }
         }
       }

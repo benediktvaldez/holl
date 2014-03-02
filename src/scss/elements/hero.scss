@@ -6,38 +6,144 @@
 
 hero {
   user-select: none;
+  // overflow: hidden;
 
   cursor: default;
   display: block;
 
-  margin: 0 auto $spacing;
-  height: 600px;
+  margin: 0 auto;
+  height: 900px;
 
   position: relative;
   z-index: 20;
 
   background-color: $color-primary;
+  transition-delay: $transition-speed-fast;
 
-  inner {
-    animation: 2s fadein 1;
+  svg {
+    transition: opacity $transition-speed-slow;
+    opacity: 0;
 
-    opacity: 1;
-    overflow: hidden;
-    display: block;
-    margin: auto;
-    padding: 0 $spacing/4;
-
-    width: 100%;
-    max-width: 600px;
-    line-height: rem-calc(80);
-
+    position: absolute;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
+    margin: auto;
 
-    font-size: rem-calc(40);
-    text-align: center;
-    color: white;
+    .active & {
+      opacity: 1;
+    }
 
-    background-color: $color-secondary;
+    &.blueprint {
+      left: -14%;
+      width: 100%;
+      .active & { opacity: 0; }
+      &.active { opacity: .1; }
+    }
+    &.logo {
+      top: -80px;
+      g {
+        transition: fill $transition-speed-slow, stroke $transition-speed-slow;
+        fill: transparent;
+        stroke: transparent;
+
+        path {
+          transition: fill $transition-speed-slow, stroke $transition-speed-slow;
+          fill: transparent;
+          stroke: $color-light;
+        }
+      }
+
+      .holl {
+        $delay: 0;
+        $step: 200ms;
+
+        .p1 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p2 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p3 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p4 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p21 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p22 {$delay: $delay + $step; transition-delay: $delay !important; }
+      }
+
+      .fasteignasala path {
+        stroke: transparent;
+
+        $delay: 0;
+        $step: 25ms;
+
+        &.p1 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p2 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p3 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p4 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p5 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p6 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p7 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p8 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p9 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p10 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p11 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p12 {$delay: $delay + $step; transition-delay: $delay !important; }
+        &.p13 {$delay: $delay + $step; transition-delay: $delay !important; }
+      }
+
+      &.done g path,
+      g .done {
+        fill: $color-light;
+        stroke: transparent;
+      }
+    }
+    &.phone {
+      top: 150px;
+      // margin-right: $spacing;
+      // margin-bottom: $spacing;
+
+      .active & { opacity: 0; }
+      &.active { opacity: 1; }
+
+      g {
+        transition: fill $transition-speed-slow, stroke $transition-speed-slow;
+        fill: transparent;
+        stroke: transparent;
+
+        path {
+          fill: transparent;
+          stroke: $color-light;
+        }
+
+        $delay: 0;
+        $step: 150ms;
+
+        .p1 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p2 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p3 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p4 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p5 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p6 {$delay: $delay + $step; transition-delay: $delay !important; }
+        .p7 {$delay: $delay + $step; transition-delay: $delay !important; }
+      }
+
+      g .done {
+        // fill: $color-light;
+        // stroke: transparent;
+      }
+    }
+
+    @include respond-to(small-only) {
+      &.logo,
+      &.phone {
+        width: 250px;
+      }
+
+      &.phone {
+        top: 100px;
+      }
+    }
+
+    @include respond-to-height(rem-calc(520)) {
+      &.logo { top: -180px; }
+      &.phone { top: 0px; }
+    }
   }
 }
