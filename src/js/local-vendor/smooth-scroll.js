@@ -9,7 +9,6 @@ define(['domReady','jquery','jqueryEasing'], function(domReady) {
     }
 
     try {
-      console.log('anchor',$(anchor).offset().top);
       $('html,body').stop().animate({
         scrollTop: (anchor === '#top' ? 0 : $(anchor).offset().top)
       },750, 'easeInOutExpo');
