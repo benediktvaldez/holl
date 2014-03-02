@@ -9,6 +9,30 @@ nav {
     margin: 0 auto;
 
     user-select: none;
+    transition: transform $transition-speed, background $transition-speed-fast;
+
+    &.fix {
+      .no-touch & {
+        position: fixed;
+        bottom: auto; top: 0;
+
+        padding-bottom: 120px;
+
+        @include respond-to(medium) {
+          padding-bottom: 60px;
+        }
+
+        >ul {
+          background: url('/img/blueprint/circle.png') no-repeat 50% 50%;
+          background-size: cover;
+          background-color: rgba($color-primary,0.95);
+        }
+
+        &:hover {
+          transform: translate3d(0px, 0px, 0px) !important;
+        }
+      }
+    }
 
     ul { @include reset-list; margin: 0; padding: 0; }
 
