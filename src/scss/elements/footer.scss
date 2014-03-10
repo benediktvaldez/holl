@@ -2,20 +2,56 @@
 footer {
   @include clearfix;
 
-  user-select: none;
-  cursor: default;
+  position: relative;
 
-  margin: $spacing auto 0;
-  padding: $spacing $spacing 0;
+  margin: 0 auto;
+  padding: 0 0 $spacing;
 
   font-size: rem-calc(12);
   text-align: center;
   color: white;
 
-  background-color: $color-secondary;
+  // background: url('/img/blueprint/circle.png') no-repeat 50% 80%;
+  background-size: cover;
+  background-color: rgba($color-primary,0.95);
+
+  user-select: none;
+  cursor: default;
 
   a {
     color: white;
     &:hover { color: $color-light; }
+  }
+
+  svg {
+    opacity: 0;
+    g {
+      transition: fill $transition-speed-slow, stroke $transition-speed-slow;
+      fill: $color-light;
+      stroke: transparent;
+    }
+
+    // position: absolute;
+    // top: 0; left: 0; right: 0; bottom: 0;
+
+    vertical-align: bottom;
+    display: inline-block;
+    margin: auto;
+
+    &.logo {
+      top: -80px;
+    }
+    &.phone {
+      top: 100px;
+
+      g path {
+        // fill: $color-light;
+        // stroke: transparent;
+      }
+    }
+
+    width: 250px;
+    @include respond-to(small-only) {
+    }
   }
 }

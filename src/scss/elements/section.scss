@@ -1,10 +1,12 @@
 
 section {
-  padding-top: $spacing*3;
-  padding-bottom: $spacing;
+  padding-top: $spacing*4;
 
-  @include respond-to(large) {
-    padding-bottom: $spacing*2;
+  position: relative;
+  z-index: 10;
+
+  @include respond-to(small-only) {
+    // padding-top: $spacing;
   }
 
   &.primary {
@@ -19,11 +21,55 @@ section {
 
   &.light {
     background-color: $color-light;
-    color: $color-secondary;
+    color: $font-color;
   }
 
   &.white {
     background-color: white;
-    color: $color-secondary;
+    color: $font-color;
+  }
+
+  &.split {
+    position: relative;
+    z-index: 1;
+
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+
+    [vertical-center] {
+      left: 0; right: 0;
+      h1, h2, h3, h4, h5, h6 {
+        margin: $spacing*2.5 0 0;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      position: relative;
+      top: rem-calc(21);
+
+      margin: 0;
+
+      color: $color-light;
+    }
+
+    row {
+      position: relative;
+      left: 0; right: 0; bottom: 0;
+
+      @include respond-to(medium) {
+        position: absolute;
+      }
+    }
+
+    &.vestfirdir1 {
+      background-image: url('/img/vestfirdir1.jpg');
+    }
+
+    &.vestfirdir2 {
+      background-image: url('/img/vestfirdir2.jpg');
+    }
   }
 }

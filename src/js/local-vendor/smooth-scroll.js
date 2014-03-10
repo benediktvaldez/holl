@@ -16,7 +16,7 @@ define(['domReady','jquery','jqueryEasing'], function(domReady) {
       setTimeout(function(){
         window.location.hash = anchor;
       }, 850);
-    } catch (error) {
+    } catch (exception) {
       window.location.hash = anchor;
     }
     return false;

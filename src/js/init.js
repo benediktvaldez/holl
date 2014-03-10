@@ -1,6 +1,6 @@
-define(['domReady','jquery'], function(domReady) {
+define(['domReady','jquery'], function() {
 
-  domReady(function(){
+  $(document).one('full-window-height',function(){
     $('html').addClass('active');
   });
 

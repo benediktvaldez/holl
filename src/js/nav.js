@@ -34,6 +34,7 @@ define(['domReady','css3','jquery'], function(domReady,css3) {
       newScroll = $document.scrollTop();
       navTop = $('hero').outerHeight() - navHeight;
       if (newScroll < navTop) {
+        $nav.css('top',$window.height());
         return $nav.removeClass('fix');
       } else { $nav.addClass('fix'); }
       diff = newScroll - lastScroll;

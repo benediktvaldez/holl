@@ -4,44 +4,29 @@ nav {
     @include clearfix;
 
     position: absolute;
-    left: 0; right: 0; bottom: 0;
+    top: 0; left: 0; right: 0;
+    z-index: 99;
 
-    margin: 0 auto;
+    margin: -61px auto 0;
 
     user-select: none;
-    transition: transform $transition-speed, background $transition-speed-fast;
+    transition: transform $transition-speed, background $transition-speed-slow;
 
-    &.fix {
-      .no-touch & {
-        position: fixed;
-        bottom: auto; top: 0;
-
-        padding-bottom: 120px;
-
-        @include respond-to(medium) {
-          padding-bottom: 60px;
-        }
-
-        >ul {
-          background: url('/img/blueprint/circle.png') no-repeat 50% 50%;
-          background-size: cover;
-          background-color: rgba($color-primary,0.95);
-        }
-
-        &:hover {
-          transform: translate3d(0px, 0px, 0px) !important;
-        }
-      }
+    a { opacity: 0; }
+    &.active a { opacity: 1; }
+    &.active >ul {
+      background-color: $color-light;
     }
 
     ul { @include reset-list; margin: 0; padding: 0; }
 
-    a { opacity: 0; }
-    &.active a { opacity: 1; }
-
     >ul {
       font-size: 0;
       text-align: center;
+
+      border-bottom: 1px solid $color-primary;
+
+      transition: background $transition-speed-fast;
 
       li {
         position: relative;
@@ -57,7 +42,7 @@ nav {
 
         .no-touch &:hover >a,
         .no-touch & >a:hover {
-          background-color: rgba($color-light,0.25);
+          background-color: rgba($color-primary,0.05);
         }
 
         >a {
@@ -68,11 +53,12 @@ nav {
           line-height: rem-calc(20);
           font-weight: 400;
           text-transform: uppercase;
-          color: white;
+          color: $color-primary;
 
           -webkit-font-smoothing: antialiased;
 
           transition: opacity $transition-speed-slow, background-color $transition-speed-fast;
+          transition-delay: 100ms;
         }
 
         .no-touch {
@@ -80,6 +66,23 @@ nav {
           >a:hover {
             color: rgba($color-light,0.75);
           }
+        }
+      }
+    }
+
+
+    &.fix {
+      .no-touch & {
+        position: fixed;
+        margin-top: 0;
+        top: 0 !important;
+
+        >ul {
+          background-color: rgba($color-light,0.95);
+        }
+
+        &:hover {
+          transform: translate3d(0px, 0px, 0px) !important;
         }
       }
     }

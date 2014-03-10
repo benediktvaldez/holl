@@ -11,7 +11,7 @@
     "cress": "~0.5.4",
     "normalize-scss": "~3.0.0",
     "modernizr": "~2.7.1",
-    "form5-alignment": "~1.1.8",
+    "form5-alignment": "~1.1.9",
     "requirejs": "~2.1.11",
     "requirejs-domready": "~2.0.1",
     "jquery-easing": "*"

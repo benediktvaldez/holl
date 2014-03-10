@@ -15,7 +15,7 @@ hero {
   height: 900px;
 
   position: relative;
-  z-index: 20;
+  z-index: 9;
 
   background-color: $color-primary;
   transition-delay: $transition-speed-fast;
@@ -36,6 +36,8 @@ hero {
     }
 
     &.blueprint {
+      position: fixed;
+      z-index: 0;
       left: -14%;
       width: 100%;
       .active & { opacity: 0; }
@@ -131,17 +133,12 @@ hero {
     }
 
     @include respond-to(small-only) {
-      &.logo,
-      &.phone {
-        width: 250px;
-      }
-
-      &.phone {
-        top: 100px;
-      }
+      &.logo, &.phone { width: 250px; }
+      &.phone { top: 100px; }
     }
 
     @include respond-to-height(rem-calc(520)) {
+      &.logo, &.phone { width: 250px; }
       &.logo { top: -180px; }
       &.phone { top: 0px; }
     }

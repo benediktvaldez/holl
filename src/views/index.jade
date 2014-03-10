@@ -4,40 +4,75 @@ block header
   include partials/_hero
 
 block footer
-  footer
-    p Höll - fasteignasala &copy; 2014
+  include partials/_footer
 
 block content
 
-  section.relative#Fyrirtaekid(full-window-height)
-    row(vertical-center)
-      column
-        h2 Fyrirtækið
+  section.split#UmHoll(full-window-height="{multiply:0.25,above:640}")
+    row: column
+      h2 Um Höll
 
-      column.medium-6.large-4.right
-        figure: img(src='http://lorempixel.com/1001/801')
+  section.light(full-window-height="{multiply:0.7}")
+    row
+      column.large-7
+        p Bræðurnir Jón og Grétar Guðmundssynir eru fasteignasalan Höll, en þetta litla fjölskyldufyrirtæki á rætur sínar að rekja til [...?]
+        p Integer pulvinar vulputate lacus, et iaculis quam porta imperdiet. Quisque varius commodo lectus vel rutrum. Nullam nec laoreet dui.
+        p Cras porttitor velit ac purus cursus, vitae volutpat quam ornare. Integer scelerisque eros id diam accumsan egestas. Morbi vel tempor sapien.
+        p Mauris accumsan varius nisl, non sodales dui scelerisque in. Aliquam a lorem nec libero rhoncus varius eget ac mi.
+      column.large-5
+        figure
+          img(src='img/logo.svg')
+          img(src='img/phone.svg')
+
+  section.split#Kaupa(full-window-height="{multiply:0.25,above:640}")
+    row: column
+      h2 Kaupa
+
+  section.light(full-window-height="{multiply:0.7}")
+    row
+      column.large-4
+        p Hér má finna ýmsa gagnlega fróðleiksmola fyrir þá sem eru að íhuga kaup á fasteign.
+        p Að því sögðu, hvetjum við þig eindregið til að taka upp símann, því ekkert jafnast á við að ræða málin við lifandi manneskju!
+        figure: img(src='img/phone.svg')
+      column.large-4
+        p Nulla facilisi. Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae.
+        p Donec a dolor at justo congue accumsan et eu dui. Curabitur in nibh nunc. Nulla pulvinar non nisi in vulputate.
+        p Mauris aliquet tortor neque, sed suscipit massa porta vitae. Nulla facilisi. Ut auctor urna vitae fermentum posuere.
+      column.large-4
+        p Donec a dolor at justo congue accumsan et eu dui. Curabitur in nibh nunc. Nulla pulvinar non nisi in vulputate.
+        p Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae.
+        p Nulla facilisi. Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae.
+
+  section.split#Selja(full-window-height="{multiply:0.25,above:640}")
+    row: column
+      h2 Selja
+
+  section.light(full-window-height="{multiply:0.7}")
+    row
+      column.large-4
+        p Hér má finna ýmsa gagnlega fróðleiksmola fyrir þá sem eru að íhuga sölu á fasteign.
+        p Að því sögðu, hvetjum við þig eindregið til að taka upp símann, því ekkert jafnast á við að ræða málin við lifandi manneskju!
+        figure: img(src='img/phone.svg')
+      column.large-4
+        p Nulla facilisi. Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae.
+        p Donec a dolor at justo congue accumsan et eu dui. Curabitur in nibh nunc. Nulla pulvinar non nisi in vulputate.
+        p Mauris aliquet tortor neque, sed suscipit massa porta vitae. Nulla facilisi. Ut auctor urna vitae fermentum posuere.
+      column.large-4
+        p Donec a dolor at justo congue accumsan et eu dui. Curabitur in nibh nunc. Nulla pulvinar non nisi in vulputate.
+        p Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae.
+        p Nulla facilisi. Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae.
+
+  section.split#HafduSamband(full-window-height="{multiply:0.25,above:640}")
+    row: column
+      h2 Hafðu Samband
+
+  section.light(full-window-height="{multiply:0.7}")
+    row
       column.medium-6.large-8
-        p Morbi at felis tortor. Integer pulvinar vulputate lacus, et iaculis quam porta imperdiet. Quisque varius commodo lectus vel rutrum. Nullam nec laoreet dui. Cras porttitor velit ac purus cursus, vitae volutpat quam ornare.
-        p Duis malesuada magna a magna consectetur, in ullamcorper dolor consequat. Proin ullamcorper purus augue, non posuere turpis ornare ac. Nulla facilisi. Vivamus quis sagittis dolor, ut placerat est. Cras id justo at nibh viverra vestibulum.
-        p Integer scelerisque eros id diam accumsan egestas. Morbi vel tempor sapien. Mauris accumsan varius nisl, non sodales dui scelerisque in. Aliquam a lorem nec libero rhoncus varius eget ac mi.
+        p.large Við hvetjum þig til að hafa samband við okkur símleiðis, en þér er einnig velkomið að senda okkur tölvupóst!
 
-  section.relative#Annad(full-window-height)
-    row(vertical-center)
-      column
-        h2 Annað
-      column.medium-6.large-8.right
-        p Nulla facilisi. Ut auctor urna vitae fermentum posuere. Mauris aliquet tortor neque, sed suscipit massa porta vitae. Donec a dolor at justo congue accumsan et eu dui. Curabitur in nibh nunc. Nulla pulvinar non nisi in vulputate.
-        p Ut malesuada scelerisque nisl quis commodo. Suspendisse in purus erat. Donec mollis sodales tortor sed lobortis. Vestibulum rutrum at lorem eget tempor. Quisque ornare leo sit amet mollis varius. In faucibus aliquet rutrum. In et leo eget metus accumsan suscipit vitae id nibh.
-      column.medium-6.large-4
-        figure: img(src='http://lorempixel.com/1000/800')
-
-  section.relative#Seinast(full-window-height)
-    row(vertical-center)
-      column
-        h2 Þriðja
-      column.medium-6.large-8
-        p Ut hendrerit, magna vitae tristique euismod, urna nisl dictum lorem, nec ultricies arcu augue non arcu.
-        p Ut pharetra risus vel erat hendrerit, et ultrices neque semper. Sed iaculis, ligula sed euismod dignissim, enim enim convallis nibh, ac adipiscing velit ligula non magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed orci odio, porta vel interdum a, semper at dui.
-        p Interdum et malesuada fames ac ante ipsum primis in faucibus. In pharetra, elit eu euismod pulvinar, lorem nisi viverra libero, quis posuere sem dolor at elit. Sed ac risus lorem. Sed eget nunc scelerisque, ultrices massa id, mattis massa.
-      column.medium-6.large-4
-        figure: img(src='http://lorempixel.com/1002/802')
+      column.large-4
+        figure
+          img(src='img/address.svg')
+          img(src='img/phone.svg')
+          img(src='img/email.svg')

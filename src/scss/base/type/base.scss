@@ -1,6 +1,14 @@
 
 p {
   margin: 0 0 $spacing;
+
+  &.small {
+    font-size: $element-font-small;
+  }
+
+  &.large {
+    font-size: $element-font-large;
+  }
 }
 
 a {
@@ -24,6 +32,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   text-transform: $heading-text-transform;
+  color: $color-primary;
+
+  @include respond-to(small-only) {
+    text-align: center;
+  }
 }
 
 h1 {
